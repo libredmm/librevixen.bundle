@@ -1,0 +1,8 @@
+[
+    {
+        "id": "vixen_metadata_dir",
+        "label": "Vixen metadata directory (local clone of vixen_metadata)",
+        "type": "text",
+        "default": "/Users/junz/.local/share/vixen"
+    }
+]
