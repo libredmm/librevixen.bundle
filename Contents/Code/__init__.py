@@ -180,7 +180,7 @@ class LibreVixen(Agent.Movies):
                 return
 
             # Title
-            metadata.title = node["title"]
+            metadata.title = "{} - {}".format(VIXEN_SITES[site], node["title"])
 
             # Originally Available At / Year
             date = datetime.strptime(node["releaseDate"][:10], "%Y-%m-%d")
@@ -189,6 +189,10 @@ class LibreVixen(Agent.Movies):
 
             # Studio
             metadata.studio = VIXEN_SITES[site]
+
+            # Collections
+            metadata.collections.clear()
+            metadata.collections.add(VIXEN_SITES[site])
 
             # Roles
             metadata.roles.clear()
